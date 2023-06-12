@@ -24,6 +24,5 @@ When to use Firehose to deliver data from Kinesis data stream?
 	- firehose as intermediary step between two Kinesis data streams
 ![Drawing 2023-05-12 kinesis data stream.excalidraw.svg](./images/Drawing%202023-05-12%20kinesis%20data%20stream.excalidraw.svg#)
 
-![kinesis](./images/Drawing 2023-05-12 kinesis data stream.excalidraw.svg)
 Kinesis Client Library (KCL)
 - Java based library used in apps to consume data *from* kinesis streams
