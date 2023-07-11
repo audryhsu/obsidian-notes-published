@@ -1,0 +1,25 @@
+name: "Trigger: Push action"
+on: [push]
+
+jobs:
+  shellcheck:
+    name: Shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@2.0.0
+        # pass shellcheck options or flags with the SHELLCHECK_OPTS env key
+        env:
+          SHELLCHECK_OPTS:
+        with:
+          scandir: './scripts''
+      -run: echo "Job status: ${{ job.status }}"
+
+  check_spelling:
+    runs-on: ubuntu-latest
+    name: Check spelling
+    steps:
+      - name: Run writegood
+        id: spell_check
+        uses: mnahinkhan/writegood-action@master
