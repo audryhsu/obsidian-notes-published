@@ -1,25 +1,30 @@
 name: "Trigger: Push action"
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 
 jobs:
-  shellcheck:
-    name: Shellcheck
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+
+  Run-shellcheck:
+    runs-on: ubuntu-latest
+    steps:
       - name: Run ShellCheck
         uses: ludeeus/action-shellcheck@2.0.0
         # pass shellcheck options or flags with the SHELLCHECK_OPTS env key
         env:
           SHELLCHECK_OPTS:
-        with:
-          scandir: './scripts''
-      -run: echo "Job status: ${{ job.status }}"
-
-  check_spelling:
-    runs-on: ubuntu-latest
-    name: Check spelling
-    steps:
-      - name: Run writegood
-        id: spell_check
-        uses: mnahinkhan/writegood-action@master
+#
+#  check_spelling:
+#    runs-on: ubuntu-latest
+#    name: Check spelling
+#    steps:
+#      - name: Run writegood
+#        id: spell_check
+#        uses: mnahinkhan/writegood-action@master
