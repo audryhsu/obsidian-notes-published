@@ -28,7 +28,8 @@ NoSQL (document model databases) - think JSON :
 	- basically, any highly-interconnected data
 - cannot refer directly to a nested item within a document (imperatively traverse the tree for access)
 
-> [!HINT] Why are document object data models bad for many to one relationships if they are just the inverse of one to many?
+> [!NOTE] 
+> **Why are document object data models bad for many to one relationships if they are just the inverse of one to many?**
 > Document databases are designed to store related data together in a single document. This makes one-to-many relationships (where a single document may contain nested subdocuments) straightforward since the many "child" items are embedded within the one "parent" document.
 > For many-to-one relationships, if many documents need to refer back to a single piece of data (ie many resumes refer back to the same college entity), this isn't as efficient in a document database. Document databases do not typically support the kind of joins that SQL databases do, which are needed to efficiently query many-to-one relationships.
 >  As a result, when you have many-to-one relationships in a document database, you may end up with either *duplication of data* or the need to perform multiple queries and combine the results in application code, which can be more complex and less performant than a join performed by a relational database.
