@@ -18,7 +18,8 @@ What do we care about in encoding formats?
 - ==forward/backward compatibility== 
 - lowest-common denominator format to pragmatically  transmit encoded data between organizations
 
-> [!hint] Spoiler: Encoding formats that use schemas that can evolve are very powerful
+> [!Hint]
+>  **Spoiler: Encoding formats that use schemas that can evolve are very powerful**
 > Schema evolution allows the same kind of flexibility as schemaless/schema-on-read JSON databases, but with better guarantees about your data!
 ## 1. Language specific formats  
 
