@@ -17,7 +17,8 @@ Some systems may share superficial similarities (a database and a message queue 
 - durability of data (in memory vs on disk)
 - create different performance characteristics
 
-> [!hint] The modern engineer has evolved from application developer to a data systems engineer
+> [!NOTE] 
+> **The modern engineer has evolved from application developer to a data systems engineer**
 >When she combines application code + underlying general purpose components -->  a service interface/API that abstracts away many implementation details from the client. 
 
 
