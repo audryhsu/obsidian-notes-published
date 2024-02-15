@@ -4,8 +4,8 @@ publish: true
 aliases: 
 cssclass: 
 ---
-# [Processes vs Threads](Processes%20vs%20Threads.md#)
----
+
+
 A computer process is top-level execution container, generally 1 process : 1 application.
 - processes get separate memory space
 - processes can talk to each other via inter-process communication (IPC)
@@ -15,12 +15,12 @@ Threads run *inside* a process
 - manual synchronization still needed to avoid race conditions (managing threads is hard!)
 	- Thread B waits until Thread A is done writing
 
-[NodeJS](../NodeJS.md#) solves this problem by just being single threaded (except for when it's not).
+[NodeJS](../NodeJS.md) solves this problem by just being single threaded (except for when it's not).
 - Node is written in JavaScript and C++
 - Javascript, V8, and event loop run on one (main) thread 
 - If calling an async method in JavaScript that is C++ backed, could be run in parallel on separate threads
 
-Blocking code means synchronous code, while JavaScript is non-blocking (it uses the event loop for it's [Concurrency](../Concurrency.md#) model.)
+Blocking code means synchronous code, while JavaScript is non-blocking (it uses the event loop for it's [Concurrency](../Concurrency.md) model.)
 
 Examples of blocking modules in NodeJS:
 - fs (filesystem)
