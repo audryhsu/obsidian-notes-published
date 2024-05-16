@@ -18,8 +18,10 @@ Reasons for replicating data:
 
 Synchronous replication: you pay in performance (wait for followers to match) and availability (stop all writes if one goes down)
 Asynchronous: ok with **eventual consistency**
-![Pasted image 20220530090616.png](../images/Pasted%20image%2020220530090616.png)
+changing of the png
+
 ![Pasted image 20240116084450.png](../images/Pasted%20image%2020240116084450.png)
+
 
 ![ddia-replication-leader-2024-01-12 09.35.07.excalidraw.svg](../images/ddia-replication-leader-2024-01-12%2009.35.07.excalidraw.svg.md)
 %%[🖋 Edit in Excalidraw](../images/ddia-replication-leader-2024-01-12%2009.35.07.excalidraw.excalidraw.md)%%
