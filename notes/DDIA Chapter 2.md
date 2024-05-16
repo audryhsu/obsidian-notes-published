@@ -6,7 +6,6 @@ tags:
 aliases: 
 publish: true
 ---
-
 [Designing Data-Intensive Applications - Martin Kleppmann highlights.pdf](../images/Designing%20Data-Intensive%20Applications%20-%20Martin%20Kleppmann%20highlights.pdf)
 # Data Models and Query Languages
 Choosing the appropriate data model to model an application's data is paramount --  the data model's data structures should model data being stored as closely as possible to make it more intuitive for developers working with the data because it affects how we *think about the problem* we are solving.

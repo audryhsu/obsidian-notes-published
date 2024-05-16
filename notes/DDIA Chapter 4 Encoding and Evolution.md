@@ -6,7 +6,6 @@ tags:
 aliases: 
 publish: true
 ---
-
 # Evolvability is a key component to long-lived code
 ![DDIA chapter 4 evolvability and encoding.excalidraw.svg](../images/DDIA%20chapter%204%20evolvability%20and%20encoding.excalidraw.svg.md)
 %%[🖋 Edit in Excalidraw](../images/DDIA%20chapter%204%20evolvability%20and%20encoding.svg), and the [dark exported image](DDIA%20chapter%204%20evolvability%20and%20encoding.excalidraw.dark.svg.md)%%

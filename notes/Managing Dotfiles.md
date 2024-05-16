@@ -5,7 +5,6 @@ tags:
 aliases: 
 publish: true
 ---
-
  # Description
  [chezmoi](https://www.chezmoi.io/what-does-chezmoi-do/) tool to automate backing up my dotfiles to my [github repository](https://github.com/audryhsu/dotfiles) and manage dotfiles across different machiens.
 - See [chezmoi daily commands](https://www.chezmoi.io/user-guide/command-overview/) for more information.

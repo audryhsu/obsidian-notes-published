@@ -4,7 +4,6 @@ aliases:
   - OS
 publish: true
 ---
-
 Tags: [Computers](../Computers.md) 
 
 Operating system is a system software that provides a set of services and utilities to manage the computer's resources and enable user applications to run. The [Kernel](./Kernel.md) is the heart of the OS.

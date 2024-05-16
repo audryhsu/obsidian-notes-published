@@ -4,7 +4,6 @@ publish: true
 aliases: 
 cssclass: 
 ---
-
 To take advantage of the speed increase that multiple cores provide, programs need to be able to split into multiple streams of code.
 - Goroutines solve the challenge of setting up and running concurrent code in a program. 
 - Channels solve the difficult of safely communicating between the code running concurrently.
@@ -14,8 +13,8 @@ Goroutines are maintained and ==scheduled by the language runtime instead of the
 Goroutine is a special type of function that can run while other goroutines are also running. Each Go program starts with one main goroutine.
 #### Synchronizing goroutines
 Two main ways to synch are using:
-1. [Channels](Go%20Lang%20Goroutines%20and%20Channels.md#channels) - most popular and unique
-2. [WaitGroup](Go%20Lang%20Goroutines%20and%20Channels.md#waitgroup) - data structure to facilitate waiting for a *known number* of go routines to be done before the outer function returns.
+1. [Channels](Go%20Lang%20Goroutines%20and%20Channels.md#Channels) - most popular and unique
+2. [WaitGroup](Go%20Lang%20Goroutines%20and%20Channels.md#WaitGroup) - data structure to facilitate waiting for a *known number* of go routines to be done before the outer function returns.
 	1. a `Waitgroup` is a data structure to essentially count threads until they're all done
 	2. typical to use an [Immediately invoked function expressions (IIFE)](../Immediately%20invoked%20function%20expressions%20(IIFE).md) to create a [closure](../Closures.md) around spawned goroutines to share waitgroup state
 

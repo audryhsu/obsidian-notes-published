@@ -3,7 +3,6 @@ publish: true
 aliases: 
 cssclass: 
 ---
-
 This is a reference for the mysterious directories that appear under the root directory `/` of a [Linux](../Linux.md) filesystem.
 
 #### folders under root
