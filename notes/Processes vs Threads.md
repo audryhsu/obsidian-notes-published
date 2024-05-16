@@ -5,7 +5,6 @@ aliases:
 cssclass: 
 ---
 
-
 A computer process is top-level execution container, generally 1 process : 1 application.
 - processes get separate memory space
 - processes can talk to each other via inter-process communication (IPC)
