@@ -5,7 +5,6 @@ tags:
 aliases: 
 publish: true
 ---
-
  # Description
  [chezmoi](https://www.chezmoi.io/what-does-chezmoi-do/) tool to automate backing up my dotfiles to my [github repository](https://github.com/audryhsu/dotfiles) and manage dotfiles across different machiens.
 - See [chezmoi daily commands](https://www.chezmoi.io/user-guide/command-overview/) for more information.
@@ -15,6 +14,12 @@ publish: true
 - *Source directory* is where chezmoi stores working copy of state
 	- *Source state* declares the desired state of your home directory.
 - *Target state* is the desired state of the destination/home directory 
+
+-- wikilink
+![Drawing_2024-05-16 13.30.19.excalidraw.svg](../images/Drawing_2024-05-16%2013.30.19.excalidraw.svg.md)
+%%[🖋 Edit in Excalidraw](../images/Drawing_2024-05-16%2013.30.19.svg)%%
+
+-- markdown link
 ![](../images/Drawing_2024-05-16%2013.30.19.excalidraw.svg)
 %%[🖋 Edit in Excalidraw](../images/Drawing_2024-05-16%2013.30.19.svg)%%
 
