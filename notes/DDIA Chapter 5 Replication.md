@@ -20,8 +20,9 @@ Synchronous replication: you pay in performance (wait for followers to match) an
 Asynchronous: ok with **eventual consistency**
 ![Pasted image 20220530090616.png](../images/Pasted%20image%2020220530090616.png)
 ![Pasted image 20240116084450.png](../images/Pasted%20image%2020240116084450.png)
-![Designing Data Intensive Applications 2024-01-12 09.35.07.excalidraw.svg](../images/Designing%20Data%20Intensive%20Applications%202024-01-12%2009.35.07.excalidraw.svg.md)
-%%[🖋 Edit in Excalidraw](../images/Designing%20Data%20Intensive%20Applications%202024-01-12%2009.35.07.svg), and the [dark exported image](Designing%20Data%20Intensive%20Applications%202024-01-12%2009.35.07.excalidraw.dark.svg.md)%%
+![](../images/Designing%20Data%20Intensive%20Applications%202024-01-12%2009.35.07.excalidraw.svg)
+%%[🖋 Edit in Excalidraw](../images/Designing%20Data%20Intensive%20Applications%202024-01-12%2009.35.07.svg)%%
+
 
 > [!NOTE] Challenge of replication: handling *changes* to replicated data
 > 3 main algorithms for replicating changes between nodes: 
@@ -93,8 +94,8 @@ Similar examples: collaborative editing tools, how to merge conflicts?
 - uses *quorum consistency*: $w + r > n$ 
 	- where $r$ and $w$ are the minimum number of votes required for the read or write to be valid in a system with $n$ nodes
 	- as long as writes are confirmed by w nodes and query at least r nodes for each read, the system will return an up to date value.
-![Drawing_2024-01-24 09.00.29.excalidraw.svg](../images/Drawing_2024-01-24%2009.00.29.excalidraw.svg.md)
-%%[🖋 Edit in Excalidraw](../images/Drawing_2024-01-24%2009.00.29.svg), and the [dark exported image](Drawing_2024-01-24%2009.00.29.excalidraw.dark.svg.md)%%
+![](../images/Drawing_2024-01-24%2009.00.29.excalidraw.svg)
+%%[🖋 Edit in Excalidraw](../images/Drawing_2024-01-24%2009.00.29.svg)%%
 
 
 Concurrent writes are still a problem even with quorum, need to eventually [converge towards a consistent state](DDIA%20Chapter%205%20Replication.md#🤔%20Converging%20toward%20a%20consistent%20state)
