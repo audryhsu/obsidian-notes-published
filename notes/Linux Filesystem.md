@@ -3,7 +3,8 @@ publish: true
 aliases: 
 cssclass: 
 ---
-This is a reference for the mysterious directories that appear under the root directory `/` of a [Linux](../Linux.md#) filesystem.
+
+This is a reference for the mysterious directories that appear under the root directory `/` of a [Linux](../Linux.md) filesystem.
 
 #### folders under root
 `/` - root folder of the host system. Contains binaries, boot files, and other things to run the system.
@@ -12,7 +13,7 @@ This is a reference for the mysterious directories that appear under the root di
 `/bin` - folder holds binary files, which are executable code for your application or library. 
 `/lib` - libraries required by executable programs in the `/bin` folder. Libraries are shared functions between programs. 
 `/opt` - optional software that is not essential for system to run
-`proc` - virtual files system to run Linux [kernel](./Kernel.md#) files
+`proc` - virtual files system to run Linux [kernel](./Kernel.md) files
 `/root` - home folder for the root account.
 `sbin` - system binaries that are essential. usually used by super user
 `srv` - service files sintalled on your system 

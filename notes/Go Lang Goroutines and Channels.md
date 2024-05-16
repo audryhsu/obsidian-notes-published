@@ -10,13 +10,14 @@ To take advantage of the speed increase that multiple cores provide, programs ne
 - Channels solve the difficult of safely communicating between the code running concurrently.
 
 Goroutines are maintained and ==scheduled by the language runtime instead of the OS, which makes it more efficient== than threads due to less memory consumption and context switching. 
-
 ### Goroutines
 Goroutine is a special type of function that can run while other goroutines are also running. Each Go program starts with one main goroutine.
 #### Synchronizing goroutines
 Two main ways to synch are using:
 1. [Channels](Go%20Lang%20Goroutines%20and%20Channels.md#channels) - most popular and unique
-2. [WaitGroup](Go%20Lang%20Goroutines%20and%20Channels.md#waitgroup) - from sync standard package
+2. [WaitGroup](Go%20Lang%20Goroutines%20and%20Channels.md#waitgroup) - data structure to facilitate waiting for a *known number* of go routines to be done before the outer function returns.
+	1. a `Waitgroup` is a data structure to essentially count threads until they're all done
+	2. typical to use an [Immediately invoked function expressions (IIFE)](../Immediately%20invoked%20function%20expressions%20(IIFE).md) to create a [closure](../Closures.md) around spawned goroutines to share waitgroup state
 
 ###### Goroutine Schedule
 ![Goroutines and Channels 2022-11-07 09.48.03.excalidraw](../images/Goroutines%20and%20Channels%202022-11-07%2009.48.03.svg)

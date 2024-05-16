@@ -1,17 +1,18 @@
 ---
-tags:
+tags: 
 aliases: 
 publish: true
 ---
-References: [Operating System](./Operating%20System.md#)
+
+References: [Operating System](./Operating%20System.md)
 
 ---
-The kernel is the heart of an [Operating System](./Operating%20System.md#) and is responsible for more low-level processes, primarily in *bridging communication between the hardware and software layers*. It is a software process that is loaded into memory when the OS is started upon computer boot up.
+The kernel is the heart of an [Operating System](./Operating%20System.md) and is responsible for more low-level processes, primarily in *bridging communication between the hardware and software layers*. It is a software process that is loaded into memory when the OS is started upon computer boot up.
 
-![Drawing operating system.svg](../images/Drawing%20operating%20system.svg#)
+![Drawing operating system.svg](../images/Drawing%20operating%20system.svg)
 
 
-The kernel runs in the background (like a daemon) and responds to [System call](../System%20call.md#)s incoming from user-level processes. 
+The kernel runs in the background (like a daemon) and responds to [System call](../System%20call.md)s incoming from user-level processes. 
 
 Main responsibilities:
 - hardware interaction --> interacts directly with processor, memory, and devices
