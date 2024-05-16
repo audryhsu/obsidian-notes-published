@@ -7,7 +7,6 @@ aliases:
 cssclasses: 
 ---
 
-
 Often used for inter-service communication in a [Microservices](../Microservices.md) architecture. 
 ![Service-Mesh_Team4.pdf](../images/Service-Mesh_Team4.pdf)
 
