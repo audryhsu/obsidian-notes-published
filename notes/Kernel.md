@@ -3,7 +3,6 @@ tags:
 aliases: 
 publish: true
 ---
-
 References: [Operating System](./Operating%20System.md)
 
 ---
