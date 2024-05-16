@@ -18,11 +18,11 @@ Reasons for replicating data:
 
 Synchronous replication: you pay in performance (wait for followers to match) and availability (stop all writes if one goes down)
 Asynchronous: ok with **eventual consistency**
-![Pasted image 20220530090616.png](../images/Pasted%20image%2020220530090616.png)
-![Pasted image 20240116084450.png](../images/Pasted%20image%2020240116084450.png)
+![[../images/Pasted image 20220530090616.png|Pasted image 20220530090616.png]]
+![[../images/Pasted image 20240116084450.png|Pasted image 20240116084450.png]]
 
-![Designing Data Intensive Applications 2024-01-12 09.35.07.excalidraw.svg](../images/Designing%20Data%20Intensive%20Applications%202024-01-12%2009.35.07.excalidraw.svg.md)
-%%[🖋 Edit in Excalidraw](../images/Designing%20Data%20Intensive%20Applications%202024-01-12%2009.35.07.svg)%%
+![[../images/Designing Data Intensive Applications 2024-01-12 09.35.07.excalidraw.svg|Designing Data Intensive Applications 2024-01-12 09.35.07.excalidraw.svg]]
+%%[[../images/Designing Data Intensive Applications 2024-01-12 09.35.07.svg|🖋 Edit in Excalidraw]]%%
 
 > [!NOTE] Challenge of replication: handling *changes* to replicated data
 > 3 main algorithms for replicating changes between nodes: 
@@ -87,19 +87,19 @@ Convergence: *database must resolve conflict in a way that all replicas arrive a
 Similar examples: collaborative editing tools, how to merge conflicts?
 ### Leaderless
 - *reads and writes are to every available node*
-- Examples: [DynamoDB](../DynamoDB.md), [Cassandra](../Cassandra.md), Voldemort
+- Examples: [[../DynamoDB|DynamoDB]], [[../Cassandra|Cassandra]], Voldemort
 - if a node misses a write, uses versioning on next read to determine the most up to date data
 - Read repair: if a client sees it got a stale value (older version) on a read request, it writes the newer value back to that replica
 - Anti-entropy process: background processes looking for inconsistencies between replicas and copy missing data in no particular order 
 - uses *quorum consistency*: $w + r > n$ 
 	- where $r$ and $w$ are the minimum number of votes required for the read or write to be valid in a system with $n$ nodes
 	- as long as writes are confirmed by w nodes and query at least r nodes for each read, the system will return an up to date value.
-![Drawing_2024-01-24 09.00.29.excalidraw.svg](../images/Drawing_2024-01-24%2009.00.29.excalidraw.svg.md)
-%%[🖋 Edit in Excalidraw](../images/Drawing_2024-01-24%2009.00.29.svg)%%
+![[../images/Drawing_2024-01-24 09.00.29.excalidraw.svg|Drawing_2024-01-24 09.00.29.excalidraw.svg]]
+%%[[../images/Drawing_2024-01-24 09.00.29.svg|🖋 Edit in Excalidraw]]%%
 
 
-Concurrent writes are still a problem even with quorum, need to eventually [converge towards a consistent state](DDIA%20Chapter%205%20Replication.md#🤔%20Converging%20toward%20a%20consistent%20state)
-![Pasted image 20240124091818.png](../images/Pasted%20image%2020240124091818.png)
+Concurrent writes are still a problem even with quorum, need to eventually [[DDIA Chapter 5 Replication#🤔 Converging toward a consistent state|converge towards a consistent state]]
+![[../images/Pasted image 20240124091818.png|Pasted image 20240124091818.png]]
 
 
 
