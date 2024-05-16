@@ -94,6 +94,8 @@ Similar examples: collaborative editing tools, how to merge conflicts?
 - uses *quorum consistency*: $w + r > n$ 
 	- where $r$ and $w$ are the minimum number of votes required for the read or write to be valid in a system with $n$ nodes
 	- as long as writes are confirmed by w nodes and query at least r nodes for each read, the system will return an up to date value.
+	
+
 ![](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.excalidraw.svg)
 %%[🖋 Edit in Excalidraw](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.excalidraw.excalidraw)%%
 
