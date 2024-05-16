@@ -6,7 +6,6 @@ tags:
 aliases: 
 publish: true
 ---
-
 # Reliable, Scalable, and Maintainable Applications
 
 Today's world, we use many different types of data systems woven together to create applications. We use our application code to stich them together.
