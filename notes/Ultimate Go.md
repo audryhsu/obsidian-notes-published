@@ -5,7 +5,6 @@ tags:
 aliases: 
 publish: true
 ---
-
 To write better, you must read a lot of good and bad code. Programming is majority taught by writing before reading. 
 
 Go is meant to be a language that can fully leverage all of the hardware. <mark style="background: #ABF7F7A6;">The machine is our mental model and platform. Core mission of go is to code in a way that you understand what the hardware is doing.</mark>
