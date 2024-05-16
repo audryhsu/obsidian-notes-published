@@ -20,7 +20,7 @@ Synchronous replication: you pay in performance (wait for followers to match) an
 Asynchronous: ok with **eventual consistency**
 ![Pasted image 20220530090616.png](../images/Pasted%20image%2020220530090616.png)
 ![Pasted image 20240116084450.png](../images/Pasted%20image%2020240116084450.png)
-![](../images/Designing%20Data%20Intensive%20Applications%202024-01-12%2009.35.07.excalidraw.svg)
+![Pasted](../images/Designing%20Data%20Intensive%20Applications%202024-01-12%2009.35.07.excalidraw.svg)
 %%[🖋 Edit in Excalidraw](../images/Designing%20Data%20Intensive%20Applications%202024-01-12%2009.35.07.svg)%%
 
 
