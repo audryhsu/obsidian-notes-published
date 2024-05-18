@@ -5,13 +5,6 @@ tags:
 aliases: 
 publish: true
 ---
-i don't think .excalidraw files are viewed as "attachments,", so they dont' get uploaded
-![Drawing operating system](../Drawing%20operating%20system.md)
-![test-2024-05-18.19.23.01.excalidraw.excalidraw](../images/test-2024-05-18.19.23.01.excalidraw.excalidraw.md)
-try again, this time without the attachment external list
-.excalidraw.md is ok
-![Drawing_ddia-leaderless-replication-2024-01-24 09.00.29.excalidraw.md](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.svg)
-%%[🖋 Edit in Excalidraw](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.excalidraw.excalidraw.md)%%
 # Chapter 5 Replication
 Reasons for replicating data:
 - keep data geographically close to users (reduce latency)
@@ -28,8 +21,9 @@ Asynchronous: ok with **eventual consistency**
 changing of the png
 
 ![Pasted image 20240116084450.png](../images/Pasted%20image%2020240116084450.png)
-![ddia-replication-leader-2024-01-12 09.35.07.excalidraw.excalidraw.svg](../images/ddia-replication-leader-2024-01-12%2009.35.07.excalidraw.excalidraw.svg.md)
-%%[🖋 Edit in Excalidraw](ddia-replication-leader-2024-01-12%2009.35.07.excalidraw.excalidraw.md)%%
+
+![drawing_leader_replication.excalidraw](../images/drawing_leader_replication.svg)
+
 > [!NOTE] Challenge of replication: handling *changes* to replicated data
 > 3 main algorithms for replicating changes between nodes: 
 > - single leader (MySQL, PostgresQL, MongoDB)
