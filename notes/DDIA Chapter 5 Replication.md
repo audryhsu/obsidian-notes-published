@@ -5,8 +5,9 @@ tags:
 aliases: 
 publish: true
 ---
-test embed png instead
-![Drawing_ddia-leaderless-replication-2024-01-24 09.00.29.excalidraw.png](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.excalidraw.png.md)
+try again, this time without the attachment external list
+
+![Drawing_ddia-leaderless-replication-2024-01-24 09.00.29.excalidraw.svg](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.excalidraw.svg.md)
 %%[🖋 Edit in Excalidraw](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.excalidraw.excalidraw.md)%%
 # Chapter 5 Replication
 Reasons for replicating data:
@@ -25,7 +26,7 @@ changing of the png
 
 ![Pasted image 20240116084450.png](../images/Pasted%20image%2020240116084450.png)
 ![ddia-replication-leader-2024-01-12 09.35.07.excalidraw.excalidraw.svg](../images/ddia-replication-leader-2024-01-12%2009.35.07.excalidraw.excalidraw.svg.md)
-%%[🖋 Edit in Excalidraw](../images/ddia-replication-leader-2024-01-12%2009.35.07.excalidraw.svg.md)%%
+%%[🖋 Edit in Excalidraw](ddia-replication-leader-2024-01-12%2009.35.07.excalidraw.excalidraw.md)%%
 > [!NOTE] Challenge of replication: handling *changes* to replicated data
 > 3 main algorithms for replicating changes between nodes: 
 > - single leader (MySQL, PostgresQL, MongoDB)
