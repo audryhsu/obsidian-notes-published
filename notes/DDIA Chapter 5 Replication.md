@@ -5,6 +5,8 @@ tags:
 aliases: 
 publish: true
 ---
+i don't think .excalidraw files are viewed as "attachments,", so they dont' get uploaded
+![Drawing operating system](../Drawing%20operating%20system.md)
 ![test-2024-05-18.19.23.01.excalidraw.excalidraw](../images/test-2024-05-18.19.23.01.excalidraw.excalidraw.md)
 try again, this time without the attachment external list
 .excalidraw.md is ok
