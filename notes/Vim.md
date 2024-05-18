@@ -3,23 +3,137 @@ tags:
 aliases: 
 publish: true
 ---
-References: [Vim Surround](https://github.com/tpope/vim-surround)
-
----
 # Config
 Where I use vim:
 - vim in the terminal
 	- `~/.vimrc` has configurations
 	- `~/.vim/pack/vendor/start/` has all my plugins 
-- intellij ideavim, which is mapped to my `.vimrc`
+- Intellij ideavim plugin, which is mapped to my `.vimrc`
 	- see [emulated vim plugins](https://github.com/JetBrains/ideavim#emulated-vim-plugins)
 - Obsidian with vim bindings enabled
 	- configured by `.obsidian.vimrc` which lives in my vault root folder
-
 # Commands
+Most taken from [A Great Vim Cheat Sheet](https://github.com/theicfire/vimsheet/blob/gh-pages/index.md)
+### Cursor movement (Normal/Visual Mode)
+- `h` `j` `k` `l` - Arrow keys
+- `w` / `b` - Next/previous word
+- `W` / `B` - Next/previous word (space separated)
+- `e` / `ge` - Next/previous end of word
+- `0` / `$` - Start/End of line
+- `^` - First non-blank character of line (same as `0w`)
 
-### Vim Surround
-Targets can be a vim |word|, |WORD|, |sentence|, |paragraph| or |line|.
+### Editing text
+- `i` / `a` - Start insert mode at/after cursor
+- `I` / `A` - Start insert mode at the beginning/end of the line
+- `o` / `O` - Add blank line below/above current line
+- `Esc` or `Ctrl+[` - Exit insert mode
+- `d` - Delete
+- `dd` - Delete line
+- `c` - Delete, then start insert mode
+- `cc` - Delete line, then start insert mode
+
+vim-surround:
+- `ds`  - delete a surrounding
+- `cs`  - change a surrounding
+- `ysiw`  - surround and insert (around) word
+- `ysis` - surround and insert (around) sentence
+- `ysip` - surround and insert (around) paragraph
+- `yss` - surround entire line
+- `yS`  - add a surrounding and place the surrounded text on a new line + indent it
+- `yss` - add a surrounding to the whole line
+- `ySs` - add a surrounding to the whole line, place it on a new line + indent it
+	- `ySS` - same as ySs
+### Operators
+- Operators also work in Visual Mode
+- `d` - Deletes from the cursor to the movement location
+- `c` - Deletes from the cursor to the movement location, then starts insert mode
+- `y` - Copy from the cursor to the movement location
+- `>` - Indent one level
+- `<` - Unindent one level
+- You can also combine operators with motions. Ex: `d$` deletes from the cursor to the end of the line.
+
+### Marking text (visual mode)
+- `v` - Start visual mode
+- `V` - Start linewise visual mode
+- `Ctrl+v` - Start visual block mode
+- `Esc` or `Ctrl+[` - Exit visual mode
+### Clipboard
+- `yy` - Yank (copy) a line
+- `p` - Paste after cursor
+- `P` - Paste before cursor
+- `dd` - Delete (cut) a line
+- `x` - Delete (cut) current character
+- `X` - Delete (cut) previous character
+- `d` / `c` - By default, these copy the deleted text
+### Exiting
+- `:w` - Write (save) the file, but don't quit
+- `:wq` - Write (save) and quit
+- `:q` - Quit (fails if anything has changed)
+- `:q!` - Quit and throw away changes
+
+### Search/Replace
+- `/pattern` - Search for pattern
+- `?pattern` - Search backward for pattern
+- `n` - Repeat search in same direction
+- `N` - Repeat search in opposite direction
+- `:%s/old/new/g` - Replace all old with new throughout file ([gn](http://vimcasts.org/episodes/operating-on-search-matches-using-gn/) is better though)
+- `:%s/old/new/gc` - Replace all old with new throughout file with confirmations
+### General
+- `u` - Undo
+- `Ctrl+r` - Redo
+### Cursor movement
+
+- `Ctrl+d` - Move down half a page
+- `Ctrl+u` - Move up half a page
+- `}` - Go forward by paragraph (the next blank line)
+- `{` - Go backward by paragraph (the next blank line)
+- `gg` - Go to the top of the page
+- `G` - Go the bottom of the page
+- `: [num] [enter]` - Go to that line in the document
+- `ctrl+e / ctrl+y` - Scroll down/up one line
+### Character search
+- `f [char]` - Move forward to the given char
+- `F [char]` - Move backward to the given char
+- `t [char]` - Move forward to before the given char
+- `T [char]` - Move backward to before the given char
+- `;` / `,` - Repeat search forwards/backwards
+
+### Editing text
+
+- `J` - Join line below to the current one
+- `r [char]` - Replace a single character with the specified char (does not use Insert mode)
+
+### Visual mode
+- `O` - Move to other corner of block
+- `o` - Move to other end of marked area
+### File Tabs
+- `:e filename` - Edit a file
+- `:tabe` - Make a new tab
+- `gt` - Go to the next tab
+- `gT` - Go to the previous tab
+- `:vsp` - Vertically split windows
+- `ctrl+ws` - Split windows horizontally
+- `ctrl+wv` - Split windows vertically
+- `ctrl+ww` - Switch between windows
+- `ctrl+wq` - Quit a window
+### Marks
+- Marks allow you to jump to designated points in your code.
+- `m{a-z}` - Set mark {a-z} at cursor position
+- A capital mark {A-Z} sets a global mark and will work between files
+- `'{a-z}` - Move the cursor to the start of the line where the mark was set
+- `''` - Go back to the previous jump location
+### Text Objects
+- Say you have `def (arg1, arg2, arg3)`, where your cursor is somewhere in the middle of the parenthesis.
+- `di(` deletes everything between the parenthesis. That says "change everything inside the nearest parenthesis". Without text objects, you would need to do `T(dt)`.
+- [Learn more](http://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/)
+### General
+- `.` - Repeat last command
+- `Ctrl+r + 0` in insert mode inserts the last yanked text (or in command mode)
+- `gv` - reselect (select last selected block of text, from visual mode)
+- `%` - jumps between matching `()` or `{}`
+# Vim Surround
+- [Vim Surround](https://github.com/tpope/vim-surround)
+- Targets can be a vim |word|, |WORD|, |sentence|, |paragraph| or |line|.
 
 Bracket types:
 - `b` -> `)`
@@ -27,12 +141,32 @@ Bracket types:
 - `t` + `<tag>` -> `<p>` or `<div>`  
 - `r` -> `]`
 - `a` -> `>`
-Commands:
-- `cs"'` - "change surround" `<target>` with `<replacement>`
-- `ysiw` - "you surround, insert (around) word"
-	- `ysis` - around sentence
-	- `ysip` - around paragraph
- - `ds)` - "delete surrounding" `<target>`
+### Commands
+`ds` - delete surroundings
 
-Visual Mode Commands:
-- `S` - "surround" selection
+| Old text<br>      | Command | New Text     |
+| ----------------- | ------- | ------------ |
+| "Hello *world!"   | ds"     | Hello World! |
+| (123+4*56)/2      | ds)     | 123+456/2    |
+| `<div>Yo!*</div>` | dst     | Yo!          |
+
+`cs"'` - "change surround" `<target>` with `<replacement>`
+
+| Old Text          | Command  | New Text        |
+| ----------------- | -------- | --------------- |
+| "Hello *world!"   | cs"      | 'Hello world!'  |
+| (123+4*56)/2      | `cs)]`   | `[123+456]/2`   |
+| (123+4*56)/2      | `cs)[`   | `[ 123+456 ]/2` |
+| `<div>Yo!*</div>` | `cst<p>` | `<p>Yo!</p>`    |
+
+`ys` adds surroundings
+- takes Vim motion or text object as first object and wraps using the second argument as with `cs`. 
+- `ysiw` - "you surround, insert around word"
+	- `ysis` - surround and insert around sentence
+	- `ysip` - surround and insert around paragraph
+	- `yss{target}` - surround entire line
+
+| Old text<br>  | Command | New Text       |
+| ------------- | ------- | -------------- |
+| Hello w*orld! | ysiw)   | Hello (world)! |
+| Hello w*orld  | yssB    | {Hello world!} |
