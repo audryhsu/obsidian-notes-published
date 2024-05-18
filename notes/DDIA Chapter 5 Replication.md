@@ -7,7 +7,7 @@ publish: true
 ---
 try again, this time without the attachment external list
 
-![Drawing_ddia-leaderless-replication-2024-01-24 09.00.29.excalidraw.svg](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.excalidraw.svg.md)
+![Drawing_ddia-leaderless-replication-2024-01-24 09.00.29.excalidraw.md](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.svg)
 %%[🖋 Edit in Excalidraw](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.excalidraw.excalidraw.md)%%
 # Chapter 5 Replication
 Reasons for replicating data:
