@@ -5,6 +5,8 @@ tags:
 aliases: 
 publish: true
 ---
+test embed [Vim](./Vim.md)
+![Kafka ERD.png](../images/Kafka%20ERD.png)
 # Chapter 5 Replication
 Reasons for replicating data:
 - keep data geographically close to users (reduce latency)
