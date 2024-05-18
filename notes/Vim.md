@@ -35,12 +35,14 @@ Most taken from [A Great Vim Cheat Sheet](https://github.com/theicfire/vimsheet/
 vim-surround:
 - `ds`  - delete a surrounding
 - `cs`  - change a surrounding
-- `ysiw`  - add a surrounding to a word
+- `ysiw`  - surround and insert (around) word
+- `ysis` - surround and insert (around) sentence
+- `ysip` - surround and insert (around) paragraph
+- `yss` - surround entire line
 - `yS`  - add a surrounding and place the surrounded text on a new line + indent it
 - `yss` - add a surrounding to the whole line
 - `ySs` - add a surrounding to the whole line, place it on a new line + indent it
-- `ySS` - same as ySs
-
+	- `ySS` - same as ySs
 ### Operators
 - Operators also work in Visual Mode
 - `d` - Deletes from the cursor to the movement location
