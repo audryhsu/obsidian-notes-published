@@ -130,7 +130,7 @@ vim-surround:
 - `gv` - reselect (select last selected block of text, from visual mode)
 - `%` - jumps between matching `()` or `{}`
 # Vim Surround
-[Vim Surround](https://github.com/tpope/vim-surround)
+- [Vim Surround](https://github.com/tpope/vim-surround)
 - Targets can be a vim |word|, |WORD|, |sentence|, |paragraph| or |line|.
 
 Bracket types:
@@ -156,6 +156,7 @@ Bracket types:
 | (123+4*56)/2      | `cs)]`   | `[123+456]/2`   |
 | (123+4*56)/2      | `cs)[`   | `[ 123+456 ]/2` |
 | `<div>Yo!*</div>` | `cst<p>` | `<p>Yo!</p>`    |
+
 `ys` adds surroundings
 - takes Vim motion or text object as first object and wraps using the second argument as with `cs`. 
 - `ysiw` - "you surround, insert around word"
@@ -167,7 +168,3 @@ Bracket types:
 | ------------- | ------- | -------------- |
 | Hello w*orld! | ysiw)   | Hello (world)! |
 | Hello w*orld  | yssB    | {Hello world!} |
-
-Visual Mode:
-- `s` - "surround" selection
-- `S` - "surround" selection but place text on a new line + indent it
