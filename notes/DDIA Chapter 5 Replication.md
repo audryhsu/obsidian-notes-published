@@ -5,11 +5,9 @@ tags:
 aliases: 
 publish: true
 ---
-embed .excalidraw file with the .md file name added
-
-![🖋 Edit in Excalidraw](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.excalidraw.excalidraw.md)
+![test-2024-05-18.19.23.01.excalidraw.excalidraw](../images/test-2024-05-18.19.23.01.excalidraw.excalidraw.md)
 try again, this time without the attachment external list
-
+.excalidraw.md is ok
 ![Drawing_ddia-leaderless-replication-2024-01-24 09.00.29.excalidraw.md](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.svg)
 %%[🖋 Edit in Excalidraw](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.excalidraw.excalidraw.md)%%
 # Chapter 5 Replication
