@@ -16,7 +16,7 @@ publish: true
 - *Target state* is the desired state of the destination/home directory 
 
 -- wikilink
-![Drawing_2024-05-16 13.30.19.excalidraw.svg](../images/Drawing_2024-05-16%2013.30.19.excalidraw.svg.md)
+![Drawing_2024-05-16 13.30.19.excalidraw.svg](../images/Drawing_2024-05-16%2013.30.19.excalidraw.svg)
 %%[🖋 Edit in Excalidraw](../images/Drawing_2024-05-16%2013.30.19.svg)%%
 
 -- markdown link

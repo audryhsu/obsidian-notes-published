@@ -44,7 +44,7 @@ Avoid starting too many to avoid resource starvation, since there are switching 
 - `chan` data structure is similar to slices or maps, and must be declared to take a certain type in the channel
 - many functions can read from the same channel, however only one goroutine has access to the value at any given time by design to prevent *data races*
 
-![Drawing_2023-06-27-go-channels.excalidraw.svg](../images/Drawing_2023-06-27-go-channels.excalidraw.svg.md)
+![Drawing_2023-06-27-go-channels.excalidraw.svg](../images/Drawing_2023-06-27-go-channels.excalidraw.svg)
 
 > [!Warning]
 > - Unclosed channels can cause [memory leaks](../Memory%20Leaks.md).

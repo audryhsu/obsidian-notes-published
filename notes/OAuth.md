@@ -21,7 +21,7 @@ Entities:
 - Client Application is usually a 3rd party service that is requesting some protected resources from another application. This application is authorized by the User (via login) to access protected resources.
 - Resource Application is the service or data store that the Client application would like access to.
 - Authorization Server is typically an identity service provider, such as Auth0, that handles user login and granting of authorization codes and access tokens
-![OAuth 2024-02-02 09.44.58.excalidraw.svg](../images/OAuth%202024-02-02%2009.44.58.excalidraw.svg.md)
+![OAuth 2024-02-02 09.44.58.excalidraw.svg](../images/OAuth%202024-02-02%2009.44.58.excalidraw.svg)
 [🖋 Edit in Excalidraw](../images/OAuth%202024-02-02%2009.44.58.svg)%%  %%  %%  %%
 
 ---
