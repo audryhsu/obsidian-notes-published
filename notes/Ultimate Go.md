@@ -101,9 +101,8 @@ func createUser() *user {
 - the escape analysis actually creates `u` **on the heap**, and then `main` gets a copy of `u`, which is a pointer to the data on the heap!
 - that ALSO means that the garbage collector will be responsible for `u` from now on
 - Bill mentions that this is pretty novel.
-![Drawing_2024-05-14 09.46.42.excalidraw.svg](../images/Drawing_2024-05-14%2009.46.42.excalidraw.svg.md)
-%%[🖋 Edit in Excalidraw](../images/Drawing_2024-05-14%2009.46.42.svg)%%
 
+![Drawing_2024-05-14 09.46.42.excalidraw](../images/Drawing_2024-05-14%2009.46.42.svg)
 
 Guidelines for readability
 - Use value construction for variables
@@ -148,7 +147,7 @@ Case study: Why is row traversal 2x efficient compared to column traversal and l
 ![Pasted image 20240514103042.png](../images/Pasted%20image%2020240514103042.png)
 >CPU: 4 physical cores, each core hosts 2 threads
 - Each thread accesses memory from closest (L1) to farthest (main memory) with data access latency increasing by orders of magnitude 
-![Drawing_2024-05-14 10.33.44.excalidraw.svg](../images/Drawing_2024-05-14%2010.33.44.excalidraw.svg.md)
+![Drawing_2024-05-14 10.33.44.excalidraw](../images/Drawing_2024-05-14%2010.33.44.svg)
 %%[🖋 Edit in Excalidraw](../images/Drawing_2024-05-14%2010.33.44.svg)%%
 
 ### array semantics
