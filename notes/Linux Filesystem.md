@@ -1,7 +1,7 @@
 ---
 publish: true
 aliases: 
-cssclass: 
+cssclasses: 
 ---
 This is a reference for the mysterious directories that appear under the root directory `/` of a [Linux](../Linux.md) filesystem.
 
@@ -15,7 +15,7 @@ This is a reference for the mysterious directories that appear under the root di
 `proc` - virtual files system to run Linux [kernel](./Kernel.md) files
 `/root` - home folder for the root account.
 `sbin` - system binaries that are essential. usually used by super user
-`srv` - service files sintalled on your system 
+`srv` - service files installed on your system 
 `sys`- info and configuration for the system
 `usr` - read-only user data
 - `usr/bin` programs installed by your linux , non-essential command binaries
