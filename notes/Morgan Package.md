@@ -6,7 +6,7 @@ tags: 🖥️
 
 # [Morgan](Morgan.md) Package
 ---
-morgan is a HTTP request logger middleware for [NodeJS](./NodeJS.md). morgan is named after Dexter Morgan, the fictious anti-hero protagonist and serial killer.
+morgan is a HTTP request logger middleware for [NodeJS](NodeJS.md). morgan is named after Dexter Morgan, the fictious anti-hero protagonist and serial killer.
 
 ### Configuration
 We must specify a logging `format` (predefined custom) and can optionally customize additional settings.   
@@ -15,7 +15,7 @@ We must specify a logging `format` (predefined custom) and can optionally custom
 	- `tiny` format is the minimal output. 
 	- `dev` format is concise and color codes response status. I like this one! 
 
-Using morgan as [ExpressJS](./ExpressJS.md) middleware
+Using morgan as [ExpressJS](ExpressJS.md) middleware
 ```js
 const express = require('express');
 const app = express()
@@ -42,4 +42,4 @@ Tags: [Programming](Programming.md) - [Web Development](Web%20Development.md) - 
 
 Reference: [morgan API](https://www.npmjs.com/package/morgan)
 
-Related: [ExpressJS](./ExpressJS.md)
+Related: [ExpressJS](ExpressJS.md)

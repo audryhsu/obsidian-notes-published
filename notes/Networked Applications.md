@@ -4,7 +4,7 @@ aliases:
 tags: 🖥️
 ---
 
-# [Networked Applications](Networked%20Applications.md)
+# [Networked Applications](Networked Applications.md)
 ---
 
 Notes on templates, routes, frameworks, and libraries
@@ -41,7 +41,7 @@ We've used Node's `HTTP.createServer` module to create an http server that is pr
 - http server delegates to the routing engine (`router` module) to parse the http request method and path to route the request to the proper path, either:
 	-  fetching a resource from the project file system or,
 	- dynamically creating a resource based on request data and leveraging our templates 
-![Pasted image 20211227194136.png](./images/Pasted%20image%2020211227194136.png)
+![Pasted image 20211227194136.png](../images/Pasted%20image%2020211227194136.png)
 # Utilities
 
 ## `fs` module
@@ -50,7 +50,7 @@ We've used Node's `HTTP.createServer` module to create an http server that is pr
 	-  the callback is passed two arguments `(err, data)` where `data` is the contents of the file
 
 ---
-Tags: [Programming](Programming.md) - [JavaScript](./JavaScript.md) - [Web Apps](Web%20Apps.md)
+Tags: [Programming](Programming.md) - [JavaScript](JavaScript.md) - [Web Apps](Web%20Apps.md)
 
 Reference: [Nodejs fs.html API](https://nodejs.org/api/fs.html#fsreadfilepath-options-callback)
 

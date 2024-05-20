@@ -13,7 +13,7 @@ tags: [excalidraw]
 
 
 # Text Elements
-%%***>>>text element-link:[Operating System](./notes/Operating%20System.md)<<<***%%[Operating System](./notes/Operating%20System.md)
+%%***>>>text element-link:[Operating System](Operating%20System.md)<<<***%%[Operating System](Operating%20System.md)
 
 
 
@@ -21,7 +21,7 @@ tags: [excalidraw]
 
  ^cnP7ao5x
 
-%%***>>>text element-link:[Kernel](./notes/Kernel.md)<<<***%%[Kernel](./notes/Kernel.md) ^oLNznowB
+%%***>>>text element-link:[Kernel](Kernel.md)<<<***%%[Kernel](Kernel.md) ^oLNznowB
 
 UI ^EDbHa6yZ
 

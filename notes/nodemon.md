@@ -6,7 +6,7 @@ tags: 🖥️
 
 # [nodemon](nodemon.md)
 ---
-nodemon is a tool that helps develop [NodeJS](./NodeJS.md) based applications by automatically restarting the node application when file changes in the directory are detected.
+nodemon is a tool that helps develop [NodeJS](NodeJS.md) based applications by automatically restarting the node application when file changes in the directory are detected.
 
 nodemon is a replacement wrapper for node. To use nodemon, replace the word `node` on the command line when executing your script.
 
@@ -30,8 +30,8 @@ $ npm run dev
 ```
 
 ---
-Tags: [Programming](Programming.md) - [NodeJS](./NodeJS.md)
+Tags: [Programming](Programming.md) - [NodeJS](NodeJS.md)
 
 Reference:
 
-Related: [npm](./npm.md) - [Networked Applications](./Networked%20Applications.md)
+Related: [npm](npm.md) - [Networked Applications](Networked%20Applications.md)
