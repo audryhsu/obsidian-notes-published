@@ -14,6 +14,7 @@ Best practices
 
 ![Drawing 2023-05-12 kinesis firehose example.excalidraw](../images/Drawing%202023-05-12%20kinesis%20firehose%20example.svg)
 
+
 When to use Firehose to deliver data from Kinesis data stream?
 - when data needs to be transformed or preprocessed before delivering to another AWS service or stage destination
 	- transform: compress, encrypt, convert
