@@ -12,7 +12,7 @@ Best practices
 - 1 MB/s default PUT limit to firehose, configurable
 - compress files before delivering to storage like S3
 
-![Drawing 2023-05-12 kinesis firehose example.excalidraw.svg](../images/Drawing%202023-05-12%20kinesis%20firehose%20example.excalidraw.svg.md)
+![Drawing 2023-05-12 kinesis firehose example.excalidraw.svg](../images/Drawing%202023-05-12%20kinesis%20firehose%20example.excalidraw.svg)
 
 When to use Firehose to deliver data from Kinesis data stream?
 - when data needs to be transformed or preprocessed before delivering to another AWS service or stage destination
@@ -22,7 +22,7 @@ When to use Firehose to deliver data from Kinesis data stream?
 	- retries, buffering, error handling
 - stream-to-stream transformation & connection
 	- firehose as intermediary step between two Kinesis data streams
-![Drawing 2023-05-12 kinesis data stream.excalidraw.svg](../images/Drawing%202023-05-12%20kinesis%20data%20stream.excalidraw.svg.md)
+![Drawing 2023-05-12 kinesis data stream.excalidraw.svg](../images/Drawing%202023-05-12%20kinesis%20data%20stream.excalidraw.svg)
 
 ![kinesis](../images/Drawing%202023-05-12%20kinesis%20data%20stream.excalidraw.svg)
 Kinesis Client Library (KCL)
