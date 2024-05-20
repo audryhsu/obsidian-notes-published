@@ -96,7 +96,7 @@ Similar examples: collaborative editing tools, how to merge conflicts?
 	- as long as writes are confirmed by w nodes and query at least r nodes for each read, the system will return an up to date value.
 
 
-![Drawing_ddia-leaderless-replication-2024-01-24 09.00.29.excalidraw.svg](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.excalidraw.svg.md)
+![Drawing_ddia-leaderless-replication-2024-01-24 09.00.29.excalidraw](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.svg)
 %%[🖋 Edit in Excalidraw](../images/Drawing_ddia-leaderless-replication-2024-01-24%2009.00.29.excalidraw.excalidraw.md)%%
 Concurrent writes are still a problem even with quorum, need to eventually [converge towards a consistent state](DDIA%20Chapter%205%20Replication.md#🤔%20Converging%20toward%20a%20consistent%20state)
 ![Pasted image 20240124091818.png](../images/Pasted%20image%2020240124091818.png)
