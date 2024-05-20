@@ -7,7 +7,7 @@ aliases:
 publish: true
 ---
 # Evolvability is a key component to long-lived code
-![DDIA chapter 4 evolvability and encoding.excalidraw.svg](../images/DDIA%20chapter%204%20evolvability%20and%20encoding.excalidraw.svg.md)
+![DDIA chapter 4 evolvability and encoding.excalidraw](../images/DDIA%20chapter%204%20evolvability%20and%20encoding.svg)
 %%[🖋 Edit in Excalidraw](../images/DDIA%20chapter%204%20evolvability%20and%20encoding.svg), and the [dark exported image](DDIA%20chapter%204%20evolvability%20and%20encoding.excalidraw.dark.svg.md)%%
 
 We need to encode (marshal, serialize) data to translate it from in-memory representation to a byte sequence to be transmitted over the wire. 
@@ -78,7 +78,7 @@ Common ways that will be discussed:
 - via asynchronous messaging systems (queues)
 
 ## Dataflow through databases
-![DDIA Chapter 4 Encoding and Evolution 2023-12-19 17.22.19.excalidraw.svg](../images/DDIA%20Chapter%204%20Encoding%20and%20Evolution%202023-12-19%2017.22.19.excalidraw.svg.md)
+![DDIA Chapter 4 Encoding and Evolution 2023-12-19 17.22.19.excalidraw](../images/DDIA%20Chapter%204%20Encoding%20and%20Evolution%202023-12-19%2017.22.19.svg)
 %%[🖋 Edit in Excalidraw](../images/DDIA%20Chapter%204%20Encoding%20and%20Evolution%202023-12-19%2017.22.19.svg), and the [dark exported image](DDIA%20Chapter%204%20Encoding%20and%20Evolution%202023-12-19%2017.22.19.excalidraw.dark.svg.md)%%
 
 > [!important] Data outlives code

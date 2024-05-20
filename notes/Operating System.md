@@ -9,7 +9,7 @@ Tags: [Computers](../Computers.md)
 Operating system is a system software that provides a set of services and utilities to manage the computer's resources and enable user applications to run. The [Kernel](./Kernel.md) is the heart of the OS.
 
 It is executed by the bootstrap program when a [computer](../Computers.md) is first booted up. 
-![Drawing_2023-06-19 computer layers diagram.excalidraw.svg](../images/Drawing_2023-06-19%20computer%20layers%20diagram.excalidraw.svg.md)
+![Drawing_2023-06-19 computer layers diagram.excalidraw](../images/Drawing_2023-06-19%20computer%20layers%20diagram.svg)
 
 OS is made up of other, higher-level components :
 - device drivers - interface that enable interaction between OS and hardware devices e.g. disk drives, network adapters, graphics cards, i/o devices

@@ -16,11 +16,11 @@ publish: true
 - *Target state* is the desired state of the destination/home directory 
 
 -- wikilink
-![Drawing_2024-05-16 13.30.19.excalidraw.svg](../images/Drawing_2024-05-16%2013.30.19.excalidraw.svg.md)
+![Drawing_2024-05-16 13.30.19.excalidraw](../images/Drawing_2024-05-16%2013.30.19.svg)
 %%[🖋 Edit in Excalidraw](../images/Drawing_2024-05-16%2013.30.19.svg)%%
 
 -- markdown link
-![](../images/Drawing_2024-05-16%2013.30.19.excalidraw.svg)
+![](../images/Drawing_2024-05-16%2013.30.19.svg)
 %%[🖋 Edit in Excalidraw](../images/Drawing_2024-05-16%2013.30.19.svg)%%
 
 Chezmoi wants you to make changes on the *working copy* (source directory), and then apply changes to the files in your home directory, and version control the source state into a remote respository.
