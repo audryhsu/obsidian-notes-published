@@ -14,7 +14,7 @@ Threads run *inside* a process
 - manual synchronization still needed to avoid race conditions (managing threads is hard!)
 	- Thread B waits until Thread A is done writing
 
-[NodeJS](../NodeJS.md) solves this problem by just being single threaded (except for when it's not).
+[NodeJS](./NodeJS.md) solves this problem by just being single threaded (except for when it's not).
 - Node is written in JavaScript and C++
 - Javascript, V8, and event loop run on one (main) thread 
 - If calling an async method in JavaScript that is C++ backed, could be run in parallel on separate threads
