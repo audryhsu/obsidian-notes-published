@@ -80,9 +80,9 @@ Steps:
 - docker, in general
 
 # WIP/future work 🤔
-1. Replace `test_db` build context to use *hosted* image instead of fetching from github and building each time
+1. Replace `test_db` build context to use *hosted* image instead of fetching from github and building each time ✅
 	1. Working with SRE to upload an image of the databases container to ECR
-	2. Create a github action that is triggered by commits to `main` to rebuild image and push new image to ECR
+	2. Create a github action that is triggered by commits to `main` to rebuild image and push new image to ECR ✅
 2. Add to config ability to change db host
 	1. flip between `localhost` and mysql container name 
 3. Get feedback on how to improve DX for pattern adoption
