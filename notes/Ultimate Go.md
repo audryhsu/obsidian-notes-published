@@ -567,12 +567,150 @@ Tips:
 [Data Races](https://github.com/ardanlabs/gotraining/blob/master/topics/go/concurrency/data_race/README.md) 
 ### Channels
 [Channels](https://github.com/ardanlabs/gotraining/blob/master/topics/go/concurrency/channels/README.md)
+
+[Channels blog post](https://www.ardanlabs.com/blog/2017/10/the-behavior-of-channels.html)
+> [!NOTE] Channels are for signaling
+> think of channels as signals (send/receive), not as queue data structures. Their primary semantic is signaling, not queuing or synchronization.
+Sender side
+- does the sender need a guarantee that the message was received?
+	- cost of a guarantee is *unknown* latencies (waiting for coworker to be at his desk before sending)
+- signaling with or without data
+	- without data (1 : M) - close the channel aka turning the lights off in the auditorium
+	- with data (1:1)
+
+Unbuffered channels have no capacity to store data.
+- provide **strong synchronization** guarantees at cost of unknown latency
+	- 🧠 manager waits at employees desk to give it a task to guarantee the task is received
+- Each send operation (`ch <- value`) on the channel blocks until another goroutine is ready to receive it (`val:= <-ch`)
+- **synchronous communication*** - guarantees no data loss, since a send MUST have a receive
+- use case: precise synchronization is necessary between goroutines
+
+Buffered channels can hold a specified number of elements
+- 🧠 manager adds tickets to employees backlog, which will get done as long as story points don't exceed sprint capacity
+	- weaker guarantees but minimizes latency
+- **asynchronous communication** - send operations don't block as long as buffer isn't full. decouples sender and receiver, allowing the sender to keep sending without waiting for immediate receiption 
+- if buffer is full and no receiver is ready, the next send operation will block.
+	- data loss is possible if buffer is full and code uses non-blocking form (`select` with default case). See drop pattern below
+
+Receiver side
+- when a goroutine is waiting to receive on a channel, it is **blocked**
+
+#### [Core channel patterns](https://github.com/ardanlabs/gotraining/blob/master/topics/go/concurrency/channels/example1/example1.go)
+1. `waitForResult` - employee knows what work it needs to do and starts immediately. Manager waits for employee to signal that it's done
+	1. send (finished results) happens before the receive (status report)
+2. `fanOut` - delegate defined work to `n` employees, and wait for each `n` to signal when complete on a channel with `n` buffer
+	1. ex: 2,000 go routines start doing work they know how to do. wait for ALL of the results
+	2. great for cron jobs, lambda functions, but can be dangerous for web services because of the multiplier effect of go routines x `n` fan out routines can explode
+3. `waitForTask` - employee doesn't know what they should do an *waits for instructions*. Manager prepares the work and sends it to them. The amount of *time waiting in the pool is unknown*
+	1. receive (waiting for work) happens before the send (instructions)
+4. `pooling` - group of employees waiting for work on an open channel 
+	1. receive (pool of waiting employees) happens before the send
+	2. difficult to find the magic number of how big the pool should be. common sense place to start is `runtime.NumCPU()`, or number of logical processors on your machine`
+#### Advanced channel patterns
+1. **Fanout Semaphore** - batch out the number of goroutines using an additional buffered semaphore channel that restricts number of goroutines that can be scheduled to run
+	1. create 2,000 runnable goroutines, but limit only 8 to the runnable semaphore channel 
+	2. the semaphore channels' buffer limits the number of *running* goroutines out of the total *runnable* go routines, because once a channel is full it's blocked
+2. **bounded work pool** - pool of employees is created to service a fixed amount of work. Manager iterates over all the work, signaling work into the pool. Once all work is signaled over channel, channel is closed and flushed, and the employee goroutines terminate. Waitgroup is decremented to 0, and we're done!
+	1.  use 8 goroutines in the pool for 2,000 tasks. feed the 8 goroutines tasks on a buffered channel and waitgroup
+3. **drop pattern** - parent goroutine signals 2,000 pieces of work to a single child goroutine that can't handle it all. IF the parent performs a send, and the child is not ready work is discarded
+	1. context: DNS attack is hoping you try to handle every single request and bring the house down. This pattern is about understanding capacity and knowing when to drop to keep the service up
+	2. channel buffer represents the capacity. if we hit capacity, detect it using a `select case, default` , and drop the work.
+	3. could be a pool of goroutines waiting
+4. **cancellation pattern** - 
+	1. uses `context.WithTimeout` that cancels after a set duration
+	2. You are the manager one last time and you hire a single employee to get work done. This time you are not willing to wait for some unknown amount of time for the employee to finish. You are on a discrete deadline and if the employee doesn’t finish in time, you are not willing to wait.
 ### Concurrency Patterns
 [Context](https://github.com/ardanlabs/gotraining/blob/master/topics/go/packages/context/README.md) | [Patterns](https://github.com/ardanlabs/gotraining/blob/master/topics/go/concurrency/patterns/README.md)
 
+> [!EXAMPLE]- Worker pool of goroutines that send data and receive shutdown signals
+> 
+> [Playground](https://goplay.tools/snippet/IhZePvuSURi)
+>
+> ```go
+> func main() {
+> 
+> 	// Create the channel for sharing results.
+> 	ch := make(chan int)
+> 
+> 	// Create a second channel "shutdown" to tell goroutines when to terminate.
+>     // This channel does not send/receive any data, hence empty struct
+> 	shutdown := make(chan struct{})
+> 
+> 	// Define the size of the worker pool. Use runtime.GOMAXPROCS(0) to size the pool based on number of processors.
+> 	poolSize := runtime.GOMAXPROCS(0)
+> 
+> 	// Create a sync.WaitGroup to monitor the Goroutine pool. Add the count.
+> 	var wg sync.WaitGroup
+> 	wg.Add(poolSize)
+> 	defer wg.Wait()
+> 
+> 	// Create a fixed size pool of goroutines to generate random numbers.
+> 	for i := 0; i < poolSize; i++ {
+> 		go func(id int) {
+> 			// Start an infinite loop.
+> 			for {
+> 				n := rand.Intn(1000)
+> 
+> 				time.Sleep(time.Duration(1000))
+> 				select {
+>                 // send the number
+> 				case ch <- n:
+> 					fmt.Printf("Worker %d sent %d\n", id, n)
+>                 // In another case receive signal (no data) from the shutdown channel.
+>                 // Make sure to call Done() and break out of the for loop
+>                 case <-shutdown:
+>                     fmt.Printf("Worker %d received shutdown signal\n", id)
+>                     wg.Done()
+>                     return
+>                 }
+> 
+>                 // NOTE: Using the default case (when ch channel blocked) as logic to cancel the goroutine
+>                 // is incorrect because we are using an unbuffered channel. As soon as Worker 1
+>                 // sends n, the channel is blocked until the main goroutine
+>                 // receives it nanoseconds later. This results in 7 out of 8 goroutines to stop (call wg.Done())
+>                 // because the channel is blocked, and essentially leaves 1 goroutine doing all of the work
+>                 // NOTE 2: We must use a separate "shutdown" channel to receive. If we defined a case
+>                 // to receive from ch channel, we'd receive the n value we just sent.
+> 				// default:
+> 				// 	fmt.Printf("Worker %d can't send down channel, shut down\n", id)
+> 				// 	wg.Done()
+> 				// 	return
+> 				// }
+> 			}
+> 		}(i)
+> 	}
+> 
+> 	// Create a slice to hold the random numbers.
+> 	var values []int
+> 
+> 	// Receive from the values channel with range.
+> 	for num := range ch {
+> 		// continue the loop if the value was even.
+> 		if num%2 == 0 {
+> 			continue
+> 		}
+> 		// Store the odd number.
+> 		fmt.Println("Keeping", num)
+> 		values = append(values, num)
+> 
+> 		// break the loop once we have 100 results.
+> 		if len(values) == 100 {
+> 			break
+> 		}
+> 	}
+> 
+> 	// Send the shutdown signal (no data) by closing the shutdown channel.
+> 	fmt.Println("sending shutdown signal")
+> 	close(shutdown)
+> 
+> 	// Print the values in our slice.
+> 	fmt.Println(len(values), values)
+> }
+> 
+> ```
 # Testing and Profiling
-
 This material covers a good portion of the tooling that comes with go. Specifically we cover testing and benchmarking. We also cover profiling memory and the scheduler. Finally we learn how to read stack traces.
+
 # Packages
 
 This material covers the essential things you need to know about the standard library and some important third party packages. Along the way you also learn about the most commonly used packages.
