@@ -10,6 +10,8 @@ publish: true
 - [Chezmoi](https://www.chezmoi.io/) for [Managing Dotfiles](./Managing%20Dotfiles.md) 
 - [Bash](../Bash.md) - zsh and ohmyzsh
 - Vim with a [great cheatsheet](https://vimsheet.com/)
+- tldr
+- navi
 ## Productivity
 - Obsidian
 	- Obsidian Git plugin - versioning my notes to a private repository 

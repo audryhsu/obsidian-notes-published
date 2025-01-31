@@ -51,4 +51,4 @@ In reality, modern databases have added support for features that provide some f
 
 # Notes
 ![DDIA Chapter 2 scratch notes.svg](../images/DDIA%20Chapter%202%20scratch%20notes.svg)
-%%[🖋 Edit in Excalidraw](../images/DDIA%20Chapter%202%20scratch%20notes.excalidraw.md), and the [dark exported image](DDIA%20Chapter%202%20scratch%20notes.dark.svg)%%
+%%[🖋 Edit in Excalidraw](../images/DDIA%20Chapter%202%20scratch%20notes.excalidraw), and the [dark exported image](DDIA%20Chapter%202%20scratch%20notes.dark.svg)%%

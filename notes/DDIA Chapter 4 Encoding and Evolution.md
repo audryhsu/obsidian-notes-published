@@ -8,7 +8,7 @@ publish: true
 ---
 # Evolvability is a key component to long-lived code
 ![DDIA chapter 4 evolvability and encoding.excalidraw](../images/DDIA%20chapter%204%20evolvability%20and%20encoding.svg)
-%%[🖋 Edit in Excalidraw](../images/DDIA%20chapter%204%20evolvability%20and%20encoding.svg), and the [dark exported image](DDIA%20chapter%204%20evolvability%20and%20encoding.excalidraw.dark.svg.md)%%
+%%[🖋 Edit in Excalidraw](../images/DDIA%20chapter%204%20evolvability%20and%20encoding.svg), and the [dark exported image](DDIA%20chapter%204%20evolvability%20and%20encoding.excalidraw.dark.svg)%%
 
 We need to encode (marshal, serialize) data to translate it from in-memory representation to a byte sequence to be transmitted over the wire. 
 # Encoding Formats
@@ -79,7 +79,7 @@ Common ways that will be discussed:
 
 ## Dataflow through databases
 ![DDIA Chapter 4 Encoding and Evolution 2023-12-19 17.22.19.excalidraw](../images/DDIA%20Chapter%204%20Encoding%20and%20Evolution%202023-12-19%2017.22.19.svg)
-%%[🖋 Edit in Excalidraw](../images/DDIA%20Chapter%204%20Encoding%20and%20Evolution%202023-12-19%2017.22.19.svg), and the [dark exported image](DDIA%20Chapter%204%20Encoding%20and%20Evolution%202023-12-19%2017.22.19.excalidraw.dark.svg.md)%%
+%%[🖋 Edit in Excalidraw](../images/DDIA%20Chapter%204%20Encoding%20and%20Evolution%202023-12-19%2017.22.19.svg), and the [dark exported image](DDIA%20Chapter%204%20Encoding%20and%20Evolution%202023-12-19%2017.22.19.excalidraw.dark.svg)%%
 
 > [!important] Data outlives code
 >   - data in database might be there from five years ago, untouched in it's original encoding unless it's been overwritten, whereas code deploys replace all code files
