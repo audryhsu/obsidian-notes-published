@@ -567,6 +567,7 @@ Tips:
 [Data Races](https://github.com/ardanlabs/gotraining/blob/master/topics/go/concurrency/data_race/README.md) 
 ### Channels
 [Channels](https://github.com/ardanlabs/gotraining/blob/master/topics/go/concurrency/channels/README.md)
+
 [Channels blog post](https://www.ardanlabs.com/blog/2017/10/the-behavior-of-channels.html)
 > [!NOTE] Channels are for signaling
 > think of channels as signals (send/receive), not as queue data structures. Their primary semantic is signaling, not queuing or synchronization.
@@ -708,7 +709,6 @@ Receiver side
 > 
 > ```
 # Testing and Profiling
-
 This material covers a good portion of the tooling that comes with go. Specifically we cover testing and benchmarking. We also cover profiling memory and the scheduler. Finally we learn how to read stack traces.
 
 # Packages
