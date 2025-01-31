@@ -63,4 +63,4 @@ Key questions for assessing a systems maintainability:
 
 
 ![ddia_chapter_1.svg](../images/ddia_chapter_1.svg)
-%%[🖋 Edit in Excalidraw](../images/ddia_chapter_1.excalidraw.md), and the [dark exported image](ddia_chapter_1.dark.svg)%%
+%%[🖋 Edit in Excalidraw](../images/ddia_chapter_1.excalidraw), and the [dark exported image](ddia_chapter_1.dark.svg)%%
