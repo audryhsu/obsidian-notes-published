@@ -5,7 +5,7 @@ tags:
   - books
   - concurrency
   - ultimatego
-aliases: 
+aliases:
 publish: true
 ---
 🗒️[Course Notes](https://github.com/ardanlabs/gotraining/blob/master/topics/courses/go/README.md)
@@ -270,7 +270,7 @@ Maps are reference types, pass COPIES of maps when moving it around the code (e.
 - access a map is not concurrency safe multi-threaded code, we need to lock it up or else data races can occur
 
 ## Decoupling code from change
-[Drawing_ultimate_go_decouple_ch4.svg](../Drawing_ultimate_go_decouple_ch4.svg)
+[Drawing_ultimate_go_decouple_ch4.svg](Drawing_ultimate_go_decouple_ch4.svg)
 
 ## Methods
 🗒️[Methods](https://github.com/ardanlabs/gotraining/blob/master/topics/go/language/methods/README.md) 
@@ -567,7 +567,6 @@ Tips:
 [Data Races](https://github.com/ardanlabs/gotraining/blob/master/topics/go/concurrency/data_race/README.md) 
 ### Channels
 [Channels](https://github.com/ardanlabs/gotraining/blob/master/topics/go/concurrency/channels/README.md)
-
 [Channels blog post](https://www.ardanlabs.com/blog/2017/10/the-behavior-of-channels.html)
 > [!NOTE] Channels are for signaling
 > think of channels as signals (send/receive), not as queue data structures. Their primary semantic is signaling, not queuing or synchronization.
@@ -709,8 +708,15 @@ Receiver side
 > 
 > ```
 # Testing and Profiling
+
 This material covers a good portion of the tooling that comes with go. Specifically we cover testing and benchmarking. We also cover profiling memory and the scheduler. Finally we learn how to read stack traces.
 
+## Benchmarking
+Micro-optimizations
+## Profiling
+Macro-optimizations
+
+oog
 # Packages
 
 This material covers the essential things you need to know about the standard library and some important third party packages. Along the way you also learn about the most commonly used packages.
