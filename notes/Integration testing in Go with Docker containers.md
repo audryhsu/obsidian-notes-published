@@ -4,7 +4,7 @@ tags:
   - ookla
   - docker
   - testing
-aliases: 
+aliases:
 publish: true
 ---
 # Background
