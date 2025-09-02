@@ -1,6 +1,6 @@
 ---
-tags: 
-aliases: 
+tags:
+aliases:
 publish: true
 ---
 excalidraw saves markdown
