@@ -1,8 +1,8 @@
 ---
 creation date: 2022-02-16 16:07
-aliases: 
+aliases:
 tags:
-  - 🖥️
+  - engineering
 publish: true
 ---
 
@@ -85,7 +85,7 @@ Explanation:
 - The event loop works the same as above, but since `var` is function scoped instead of block scoped, each callback to the anonymous function has access to the same closure of `i` which, by the time the event loop gets to the `console.log(i)` statements, has already finished incrementing to 5. 
 
 ---
-Tags: [Programming](Programming.md) - [JavaScript](../JavaScript.md) 
+Tags: [Programming](../Programming.md) - [JavaScript](../JavaScript.md) 
 
 Reference: [Understanding Event Loop - Medium](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff) || [Loupe](http://latentflip.com/loupe/?code=ZnVuY3Rpb24gZGVsYXlMb2coKSB7CiAgZm9yIChsZXQgaSA9IDE7IGkgPD0gNTsgaSsrKSB7CiAgICBzZXRUaW1lb3V0KGZ1bmN0aW9uKCkgewogICAgICBjb25zb2xlLmxvZyhpKTsKICAgIH0sIDEwMDApOwogIH0KfSAKCmRlbGF5TG9nKCk7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)
 
