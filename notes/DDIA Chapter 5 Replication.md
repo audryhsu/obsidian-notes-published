@@ -2,7 +2,7 @@
 tags:
   - "#designing-data-intensive-applications"
   - books
-aliases: 
+aliases:
 publish: true
 ---
 # Chapter 5 Replication
@@ -22,7 +22,7 @@ changing of the png
 
 ![Pasted image 20240116084450.png](../images/Pasted%20image%2020240116084450.png)
 
-![drawing_leader_replication.excalidraw](../images/drawing_leader_replication.svg)
+![Drawing - database leader_replication.excalidraw](../images/Drawing%20-%20database%20leader_replication.svg)
 
 > [!NOTE] Challenge of replication: handling *changes* to replicated data
 > 3 main algorithms for replicating changes between nodes: 
