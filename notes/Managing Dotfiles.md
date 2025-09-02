@@ -2,7 +2,7 @@
 tags:
   - tools
   - configuration
-aliases: 
+aliases:
 publish: true
 ---
  # Description
