@@ -1,8 +1,8 @@
 ---
 creation date: 2022-03-22 22:05
-aliases: 
+aliases:
 tags:
-  - 🖥️
+  - engineering
 publish: true
 ---
  NodeJS is a JavaScript runtime based on Google's Chrome V8 JavaScript engine. 
@@ -32,7 +32,7 @@ console.log(`Server running on port ${PORT}`)
 ```
 
 ---
-Tags: [Programming](Programming.md) - [JavaScript](../JavaScript.md) - [Backend Development](Backend%20Development.md) 
+Tags: [Programming](../Programming.md) - [JavaScript](../JavaScript.md) - [Backend Development](Backend%20Development.md) 
 
 Reference:  https://nodejs.org/en/docs/guides/blocking-vs-non-blocking/
 

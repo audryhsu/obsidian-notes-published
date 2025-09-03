@@ -3,7 +3,7 @@ tags:
   - engineering
   - designing-data-intensive-applications
   - books
-aliases: 
+aliases:
 publish: true
 ---
 # Evolvability is a key component to long-lived code

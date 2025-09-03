@@ -3,7 +3,7 @@ tags:
   - books
   - engineering
   - designing-data-intensive-applications
-aliases: 
+aliases:
 publish: true
 ---
 # Reliable, Scalable, and Maintainable Applications

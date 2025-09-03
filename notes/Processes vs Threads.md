@@ -1,8 +1,8 @@
 ---
 tags: 📥️ 🌱
 publish: true
-aliases: 
-cssclass: 
+aliases:
+cssclass:
 ---
 
 A computer process is top-level execution container, generally 1 process : 1 application.

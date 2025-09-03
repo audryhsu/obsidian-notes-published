@@ -1,8 +1,8 @@
 ---
 tags: golang, concurrency
 publish: true
-aliases: 
-cssclass: 
+aliases:
+cssclass:
 ---
 To take advantage of the speed increase that multiple cores provide, programs need to be able to split into multiple streams of code.
 - Goroutines solve the challenge of setting up and running concurrent code in a program. 

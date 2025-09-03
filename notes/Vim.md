@@ -1,6 +1,6 @@
 ---
-tags: 
-aliases: 
+tags:
+aliases:
 publish: true
 ---
 # Config
@@ -21,7 +21,22 @@ Most taken from [A Great Vim Cheat Sheet](https://github.com/theicfire/vimsheet/
 - `e` / `ge` - Next/previous end of word
 - `0` / `$` - Start/End of line
 - `^` - First non-blank character of line (same as `0w`)
-
+- `(` / `)` - beginning/end of sentence
+#### Moving the page
+- `H` - move cursor to **highest** line on the screen
+- `M` - Move the cursor to the **middle** line on the screen
+- `L` -	Move the cursor to the **lowest** line on the screen
+- `Ctrl+d` - Move down half a page
+- `Ctrl+u` - Move up half a page
+- `}` - Go forward by paragraph (the next blank line)
+- `{` - Go backward by paragraph (the next blank line)
+- `ctrl+e / ctrl+y` - Scroll down/up one line
+##### Moving with precision
+- `gg` - Go to the top of the page
+- `G` - Go the bottom of the page
+- `: [num] [enter]` - Go to that line in the document
+- `"``"` - Return to previous place
+- `''` - Return to previous line 
 ### Editing text
 - `i` / `a` - Start insert mode at/after cursor
 - `I` / `A` - Start insert mode at the beginning/end of the line
@@ -29,7 +44,7 @@ Most taken from [A Great Vim Cheat Sheet](https://github.com/theicfire/vimsheet/
 - `Esc` or `Ctrl+[` - Exit insert mode
 - `d` - Delete
 - `dd` - Delete line
-- `c` - Delete, then start insert mode
+- `c` - **change**, then start insert mode
 - `cc` - Delete line, then start insert mode
 
 vim-surround:
@@ -81,16 +96,6 @@ vim-surround:
 ### General
 - `u` - Undo
 - `Ctrl+r` - Redo
-### Cursor movement
-
-- `Ctrl+d` - Move down half a page
-- `Ctrl+u` - Move up half a page
-- `}` - Go forward by paragraph (the next blank line)
-- `{` - Go backward by paragraph (the next blank line)
-- `gg` - Go to the top of the page
-- `G` - Go the bottom of the page
-- `: [num] [enter]` - Go to that line in the document
-- `ctrl+e / ctrl+y` - Scroll down/up one line
 ### Character search
 - `f [char]` - Move forward to the given char
 - `F [char]` - Move backward to the given char

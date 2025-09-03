@@ -3,8 +3,8 @@ tags:
   - 📥️
   - 🌱
 publish: true
-aliases: 
-cssclasses: 
+aliases:
+cssclasses:
 ---
 
 # [OAuth](OAuth.md)

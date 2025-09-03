@@ -1,7 +1,7 @@
 ---
 publish: true
-aliases: 
-cssclasses: 
+aliases:
+cssclasses:
 ---
 This is a reference for the mysterious directories that appear under the root directory `/` of a [Linux](../Linux.md) filesystem.
 

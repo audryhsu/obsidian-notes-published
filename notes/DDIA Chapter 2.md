@@ -3,7 +3,7 @@ tags:
   - books
   - designing-data-intensive-applications
   - engineering
-aliases: 
+aliases:
 publish: true
 ---
 [Designing Data-Intensive Applications - Martin Kleppmann highlights.pdf](../images/Designing%20Data-Intensive%20Applications%20-%20Martin%20Kleppmann%20highlights.pdf)
